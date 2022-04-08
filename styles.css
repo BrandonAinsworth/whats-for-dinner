@@ -1,10 +1,106 @@
-/* font-family: 'Roboto', sans-serif;
+.nav-bar {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0fb9b1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: space-evenly;
+    margin: -8px -8px;
+    padding-left: 15px;
+    border: 2px solid red;
+}
 
+.title {
+border: 2px solid red;
+}
+
+.add-recipe-button {
+    display: flex;
+}
+
+.buttons {
+    border: 2px solid red;
+}
+
+body {
+    background-image: url("./assets/burger-friends.jpg");
+    background-size: 100%;
+}
+
+.red-asterisk {
+    color: red;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 2px solid red;
+    background: rgba(225, 225, 225, .9);
+
+}
+
+.left-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(225, 225, 225, .9);
+    border: 2px solid red;
+    height: 50%;
+    width: 30%;
+}
+
+.right-box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(225, 225, 225, .9);
+    border: 2px solid red;
+    height: 50%;
+    width: 30%;
+}
+
+
+/*
 COLORS
 teal - #0fb9b1;
 frosted white - rgba(225, 225, 225, .9);
 grey - #95a5a6;
 red - #ee5253
 
-*/
 
+*/
+/* 
+
+
+
+
+.boxes {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+
+.box1 {
+display: flex;
+height: 500px;
+width: 500px;
+margin: 100px;
+background-color:rgba(225, 225, 225, .9);
+}
+.box2 {
+display: flex;
+height: 500px;
+width: 500px;
+margin: 100px;   
+background-color:rgba(225, 225, 225, .9);
+}
+
+
+} */
