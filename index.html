@@ -10,36 +10,39 @@
   <main>
     <section class="nav-bar">
       <div class="title">What's for dinner?</div>
-      <button class="add-recipe-button">Add a Recipe</button>
+      <button class="add-recipe-button">Add A Recipe</button>
     </section>
     <section class="box-container">
       <section class="left-box">
-        <h3>What are you looking for?<span class="red-asterisk">*</span></h3>
-        <form class="buttons">
-          <div class="button">
-            <input type="radio" id="Side" name="drone" value="Side">
-            <label for="Side">Side</label>
+        <div class="left-box-title">What are you looking for?<span class="red-asterisk">*</span></div>
+        <form class="radio-button-container">
+          <div class="radio-button">
+            <input class="side-button" type="radio" id="Side" name="drone" value="Side">
+            <label class="label-style" for="Side">Side</label>
           </div>
-          <div>
-            <input type="radio" id="Main Dish" name="drone" value="Main Dish">
-            <label for="Main Dish">Main Dish</label>
+          <div class="radio-button">
+            <input class="main-dish-button" type="radio" id="Main Dish" name="drone" value="Main Dish">
+            <label class="label-style" for="Main Dish">Main Dish</label>
           </div>
-          <div>
-            <input type="radio" id="Dessert" name="drone" value="Dessert">
-            <label for="huey">Dessert</label>
+          <div class="radio-button">
+            <input class="dessert-button" type="radio" id="Dessert" name="drone" value="Dessert">
+            <label class="label-style" for="huey">Dessert</label>
           </div>
-          <div>
-            <input type="radio" id="Entire Meal" name="drone" value="Main Dish">
-            <label for="Entire Meal">Entire Meal</label>
+          <div class="radio-button">
+            <input class="entire-meal-button" type="radio" id="Entire Meal" name="drone" value="Main Dish">
+            <label class="label-style" for="Entire Meal">Entire Meal</label>
           </div>
+        </form>
+        <button class="lets-cook-button">LET'S COOK!</button>
       </section>
-    </form>
-    <section class='right-box'>
-      <img src="./assets/cookpot.svg">
-      </div>
-    </section>
+      <section class='right-box'>
+        <img class="pot-image" src="./assets/cookpot.svg">
+        <div class="lets-cook-result hidden">You should make: </div>
+        <div class="left-button-selection hidden"></div>
+      </section>
     </section>
   </main>
 </body>
 <script type="text/javascript" src="main.js"></script>
+
 </html>

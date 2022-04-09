@@ -4,29 +4,40 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: stretch;
     align-content: space-evenly;
     margin: -8px -8px;
     padding-left: 15px;
-    border: 2px solid red;
+    
+    height: 44px;
 }
 
 .title {
-border: 2px solid red;
+font-weight: bold;
+margin-top: 10px;
 }
 
 .add-recipe-button {
     display: flex;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 3%;
 }
 
-.buttons {
-    border: 2px solid red;
-}
+.add-a-recipe-button:active {
+    transform: scale(0.98);
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    }
 
 body {
     background-image: url("./assets/burger-friends.jpg");
-    background-size: 100%;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .red-asterisk {
@@ -38,9 +49,14 @@ body {
     justify-content: center;
     align-items: center;
     justify-content: space-evenly;
-    border: 2px solid red;
-    background: rgba(225, 225, 225, .9);
+    margin-top: 80px;
 
+}
+
+.lets-cook-button {
+    background-color: #0fb9b1;
+    border-radius: 3%;
+    margin-top: 10px;
 }
 
 .left-box {
@@ -49,9 +65,50 @@ body {
     flex-direction: column;
     align-items: center;
     background: rgba(225, 225, 225, .9);
-    border: 2px solid red;
-    height: 50%;
-    width: 30%;
+    height: 50vh;
+    width: 45vw;
+}
+
+.left-box-title {
+    margin-bottom: 35px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.radio-button-container {
+
+border-right-width: 40px;
+margin-right: 300px;
+
+}
+
+.radio-button {
+margin-bottom: 15px;
+}
+
+.side-button {
+padding-bottom: 1vw;
+font-size: 19px;
+}
+
+.main-dish-button {
+    padding-bottom: 1vw;
+    font-size: 19px;
+}
+
+.dessert-button {
+    padding-bottom: 1vw;
+    font-size: 19px;
+}
+
+.entire-meal-button {
+    padding-bottom: 1vw;
+    font-size: 19px;
+}
+
+.label-style {
+    padding-bottom: 1vw;
+    font-size: 19px;
 }
 
 .right-box {
@@ -60,11 +117,21 @@ body {
     flex-direction: column;
     align-items: center;
     background: rgba(225, 225, 225, .9);
-    border: 2px solid red;
-    height: 50%;
-    width: 30%;
+    height: 50vh;
+    width: 45vw;
 }
 
+.pot-image {
+    max-width: 30%;
+}
+
+.lets-cook-result {
+    border: 1px solid red;
+}
+
+.hidden {
+    display: none;
+}
 
 /*
 COLORS
