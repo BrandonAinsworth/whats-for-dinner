@@ -1,14 +1,15 @@
 //querySelectors
 var letsCookButton = document.querySelector(".lets-cook-button");
 var potImage = document.querySelector(".pot-image");
-var leftBoxButtons = document.querySelectorAll('input[name=drone]')
+var leftBoxButtons = document.querySelectorAll('input[name="drone"]')
 var letsCookResult = document.querySelector(".lets-cook-result");
 var leftButtonSelection = document.querySelector(".left-button-selection");
 var rightBox = document.querySelector(".right-box");
 //arrays
 
 var sides = [
-    ["Miso Glazed Carrots",
+    
+        "Miso Glazed Carrots",
         "Coleslaw",
         "Garden Salad",
         "Crispy Potatoes",
@@ -19,9 +20,10 @@ var sides = [
         "Garlic Butter Mushrooms",
         "Hush Puppies"
     ]
-]
+
 var mains = [
-    ["Spaghetti and Meatballs",
+    
+        "Spaghetti and Meatballs",
         "Pineapple Chicken",
         "Shakshuka",
         "Thai Yellow Curry",
@@ -29,14 +31,16 @@ var mains = [
         "Chicken Parmesean",
         "Butternut Squash Soup",
         "BBQ Chicken Burgers",
-        "Ramen", "Empanadas",
+        "Ramen",
+        "Empanadas",
         "Chicken Fried Rice",
         "Sheet Pan Fajitas",
         "Margarita Pizza",
-    ]
+    
 ]
 var desserts = [
-    ["Apple Pie",
+    
+        "Apple Pie",
         "Lemon Meringue Pie",
         "Black Forest Cake",
         "Banana Bread",
@@ -48,54 +52,60 @@ var desserts = [
         "Macarons",
         "Macaroons",
         "Chocolate Cupcakes",
-        "Pavlova", "Pumpkin Pie",
+        "Pavlova", 
+        "Pumpkin Pie",
         "Key Lime Pie",
         "Tart Tatin",
         "Croissants",
         "Eclairs"
-    ]
+    
 ]
 
-var options = {
-    sides: sides,
-    mains: mains,
-    desserts: desserts
-}
 
 
 //event listen
 
-letsCookButton.addEventListener('click', function () {
+letsCookButton.addEventListener('click', function() {
     event.preventDefault();
-    hiddenToggle(potImage,letsCookResult,leftButtonSelection);
-    letsCook();
+    hiddenToggle(potImage, letsCookResult, leftButtonSelection);
+    letsCookButtonClick();
+    showFood();
 });
 
 
 
 //functions
 function getRandomIndex(array) {
-    return Math.floor(Math.random() * array.length)
+return array[Math.floor(Math.random()*array.length)];
 };
+
 
 function hiddenToggle(element) {
     element.classList.toggle('hidden');
 }
 
 
-
-function letsCook() {
+function letsCookButtonClick() {
     for (var i = 0; i < leftBoxButtons.length; i++) {
         if (leftBoxButtons[i].checked) {
-            var cook = leftBoxButtons[i].value;
+            return leftBoxButtons[i].value;
         }
     }
-    var letsCookDisplay = options[cook][getRandomIndex(options[cook])];
-    showFood(letsCookDisplay);
+
 }
 
 
-
 function showFood() {
-    leftButtonSelection.innerText = letsCookDisplay;
+    var select = letsCookButtonClick();
+
+    if (select === "Side") {
+        rightBox.innerHTML = `<h2>You should make: ${getRandomIndex(sides)}!</h2>`
+    } else if (select === "Main Dish") {
+        rightBox.innerHTML = `<h2>You should make: ${getRandomIndex(mains)}!</h2>`
+    } else if (select === "Dessert") {
+        rightBox.innerHTML = `<h2>You should make: ${getRandomIndex(desserts)}!</h2>`
+    } else if (select === "Entire Meal") {
+        rightBox.innerHTML = `<h2>To start, we'll go for the most amazing, ${getRandomIndex(sides)}, then while that's on, get to work 
+        on making your stunning ${getRandomIndex(mains)}- lastly, enjoy decadence and luxury with some sensational ${getRandomIndex(desserts)}. Brilliant. </h2>`
+}
 }
